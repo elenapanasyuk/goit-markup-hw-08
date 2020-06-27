@@ -1,24 +1,24 @@
-// .header {
-//   display: flex;
-// }
+.header {
+  display: flex;
+}
 
 // .main-nav {
 //   display: flex;
 //   align-items: center;
 // }
-// .header-logo {
-//   @extend %link;
-//   color: $logo-black-color;
-//   font-family: $logo-font;
+.header-logo {
+  @extend %link;
+  color: $logo-black-color;
+  font-family: $logo-font;
 
-//   font-weight: 700;
-//   font-size: 26px;
-//   line-height: 1.19;
-// }
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
 
-// .header-logo span {
-//   color: $accent-color;
-// }
+.header-logo span {
+  color: $accent-color;
+}
 
 // /* Site nav */
 // .site-nav {

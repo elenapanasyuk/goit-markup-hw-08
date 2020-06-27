@@ -1,34 +1,38 @@
-// .features-list {
-//   @extend %list;
-//   display: flex;
-// }
+.features-list {
+  @extend %list;
+  //   display: flex;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 30px;
+}
 
 // .features-list .item + .item {
 //   margin-left: 30px;
 // }
 
-// .features .title {
-//   margin-top: 0;
-//   margin-bottom: 10px;
+.features .title {
+  margin-top: 0;
+  margin-bottom: 10px;
 
-//   color: $title-text-color;
+  color: $title-text-color;
 
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   text-transform: uppercase;
-// }
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
 
-// .features p {
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
+.features p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-// .features-icon {
-//   @include centeredFlex();
-//   margin-bottom: 30px;
+.features-icon {
+  @include centeredFlex();
+  margin-bottom: 30px;
 
-//   height: 120px;
-//   border-radius: 4px;
-//   background-color: $secondary-background-color;
-// }
+  height: 120px;
+  border-radius: 4px;
+  background-color: $secondary-background-color;
+}

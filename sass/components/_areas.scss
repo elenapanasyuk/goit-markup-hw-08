@@ -1,4 +1,10 @@
-// /* Areas */
+/* Areas */
+
+.areas {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
 
 // .areas-list {
 //   @extend %list;

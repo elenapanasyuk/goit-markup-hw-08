@@ -1,69 +1,75 @@
-// .team {
-//   background-color: $secondary-background-color;
-// }
-// .team-list {
-//   @extend %list;
-//   display: flex;
-// }
+.team {
+  background-color: $secondary-background-color;
+}
+.team-list {
+  @extend %list;
+  //   display: flex;
+}
 
-// .team-list .item {
-//   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//     0px 1px 3px rgba(0, 0, 0, 0.12);
-//   overflow: hidden;
-//   background-color: $primary-white-color;
-//   text-align: center;
-// }
+.team-list .item {
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+  background-color: $primary-white-color;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 
 // .team-list .item + .item {
 //   margin-left: 30px;
 // }
-// .team-img {
-//   display: block;
-//   margin-bottom: 30px;
-// }
-// .team .name {
-//   margin-top: 0;
-//   margin-bottom: 10px;
 
-//   color: $title-text-color;
+.team-img {
+  display: block;
+  margin-bottom: 30px;
+}
+.team .name {
+  margin-top: 0;
+  margin-bottom: 10px;
 
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1.18;
-// }
+  color: $title-text-color;
 
-// .team .profession {
-//   margin-top: 0;
-//   margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
 
-//   font-size: 16px;
-//   line-height: 1.18;
-// }
+.team .profession {
+  margin-top: 0;
+  margin-bottom: 16px;
 
-// .social-networks-list {
-//   @extend %list;
-//   display: flex;
-//   padding-bottom: 24px;
-//   justify-content: center;
-// }
+  font-size: 16px;
+  line-height: 1.18;
+}
 
-// .social-networks-list .soc-item:not(:last-child) {
-//   margin-right: 10px;
-// }
+.social-networks-list {
+  @extend %list;
+  display: flex;
+  padding-bottom: 24px;
+  justify-content: center;
+}
 
-// .soc-button {
-//   @include centeredFlex();
-//   width: 44px;
-//   height: 44px;
-//   border-radius: 50%;
-//   fill: $clients-icons-color;
+.social-networks-list .soc-item:not(:last-child) {
+  margin-right: 10px;
+}
 
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-//     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.soc-button {
+  @include centeredFlex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $clients-icons-color;
 
-//   &:hover,
-//   &:focus {
-//     fill: $primary-white-color;
-//     background-color: $accent-color;
-//   }
-// }
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $primary-white-color;
+    background-color: $accent-color;
+  }
+}
