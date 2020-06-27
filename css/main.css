@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* основной цвет фона белый  #FFFFFF  */
+/* цвет фона за макетом  #E5E5E5  */
+/* цвет фона заголовков чем мы занимаемся rgba(47, 48, 58, 0.8) */
+/* цвет фона команды  #F5F4FA  */
+/* цвет фона футера  #2F303A */
+/* черный цвет лого #000000 */
+/* основной цвет заголовка #212121 */
+/* основной цвет текста #757575 */
+/* белый #FFFFFF  */
+/* акцент #2196F3 */
+/* ховер на карточках портфолио rgba(33, 150, 243, 0.9) */
+/* цвет логотипов клиентов #AFB1B8 */
+/* цвет рамки в карточках портфолио #EEEEEE */
+/* цвет контактов в футере  rgba(255, 255, 255, 0.6) */
+/* цвет копирайта на футере rgba(255, 255, 255, 0.4) */
+/* цвет фона иконок соцсетей в футере rgba(255, 255, 255, 0.1) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: #ffffff;
+  color: #757575;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
