@@ -15,6 +15,7 @@
 /* цвет контактов в футере  rgba(255, 255, 255, 0.6) */
 /* цвет копирайта на футере rgba(255, 255, 255, 0.4) */
 /* цвет фона иконок соцсетей в футере rgba(255, 255, 255, 0.1) */
+/* нижняя рамка в хэдэре #ececec */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -26,17 +27,17 @@
   overflow: hidden;
 }
 
-.header-logo, .site-nav .link, .footer-logo, .footer-address .link {
+.header-logo, .site-nav .link, .header-contacts .link, .footer-logo, .footer-address .link {
   text-decoration: none;
 }
 
-.site-nav, .features-list, .team-list, .social-networks-list, .clients-list, .join-social-networks .footer-social-networks {
+.site-nav, .header-contacts, .features-list, .team-list, .social-networks-list, .clients-list, .join-social-networks .footer-social-networks, .categories-list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.button-send {
+.button-send, .portfolio .button {
   display: inline-block;
   text-align: center;
   border-radius: 4px;
@@ -77,7 +78,6 @@ body.modal-open {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
 }
 
 @media screen and (min-width: 480px) {
@@ -100,6 +100,16 @@ body.modal-open {
 
 .header {
   position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ececec;
 }
 
 .header-logo {
@@ -144,6 +154,12 @@ body.modal-open {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav .link {
+    display: inline-block;
+  }
+}
+
 .site-nav .link:hover, .site-nav .link:focus {
   color: #2196f3;
 }
@@ -153,7 +169,7 @@ body.modal-open {
   padding-bottom: 12px;
 }
 
-.current-item {
+.link.current {
   position: relative;
 }
 
@@ -166,6 +182,28 @@ body.modal-open {
   height: 4px;
   border-radius: 2px;
   background: #2196f3;
+}
+
+/* Header contacts */
+.header-contacts .link {
+  color: #757575;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  fill: #757575;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contacts .link:hover, .header-contacts .link:focus {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header .container {
@@ -199,6 +237,12 @@ body.modal-open {
 
 .menu-button .icon-cross {
   display: none;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button .icon-cross:hover, .menu-button .icon-cross:focus {
+  fill: #2196f3;
 }
 
 .menu-button.is-open .icon-cross {
@@ -209,10 +253,21 @@ body.modal-open {
   display: none;
 }
 
+.menu-button .icon-menu {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button .icon-menu:hover, .menu-button .icon-menu:focus {
+  fill: #2196f3;
+}
+
 .menu-container {
-  background-color: palegoldenrod;
   padding: 60px;
   text-align: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
 }
 
 @media screen and (max-width: 767px) {
@@ -222,6 +277,10 @@ body.modal-open {
     top: 100%;
     left: 0;
     width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
   }
   .menu-container.is-open {
     display: block;
@@ -693,10 +752,16 @@ body.modal-open {
   margin: 0 0 30px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-title {
+    line-height: 1.15;
+  }
 }
 
 .form-call .form-field {
@@ -769,9 +834,15 @@ body.modal-open {
 }
 
 .policy-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .policy-link {
@@ -892,5 +963,45 @@ body.modal-open {
 
 .button-close:hover, .button-close:focus {
   fill: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .categories-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .categories-list .item:not(:last-child) {
+    margin-right: 8px;
+  }
+  .categories-list .item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
+  .categories-list .item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+.portfolio .button {
+  padding: 6px 22px;
+  min-width: 73px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio .button:hover, .portfolio .button:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=main.css.map */
