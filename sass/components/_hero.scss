@@ -8,14 +8,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: $hero-gradient, url("/images/hero-mob/hero.jpg");
+  background-image: $hero-gradient, url("../images/hero-mob/hero.jpg");
 }
 
 @media screen and (max-width: 767px) {
   .overlay {
     max-width: 480px;
     height: 400px;
-    background-image: $hero-gradient, url("/images/hero-mob/hero.jpg");
+    background-image: $hero-gradient, url("../images/hero-mob/hero.jpg");
     background-size: 480px 400px;
   }
 }
@@ -25,7 +25,7 @@
   .overlay {
     max-width: 480px;
     height: 400px;
-    background-image: $hero-gradient, url("/images/hero-mob/hero@2x.jpg");
+    background-image: $hero-gradient, url("../images/hero-mob/hero@2x.jpg");
     background-size: 480px 400px;
   }
 }
@@ -34,7 +34,7 @@
   .overlay {
     width: 768px;
     height: 400px;
-    background-image: $hero-gradient, url("/images/hero-tab/hero.jpg");
+    background-image: $hero-gradient, url("../images/hero-tab/hero.jpg");
     background-size: cover;
   }
 }
@@ -44,7 +44,7 @@
   .overlay {
     width: 768px;
     height: 400px;
-    background-image: $hero-gradient, url("/images/hero-tab/hero@2x.jpg");
+    background-image: $hero-gradient, url("../images/hero-tab/hero@2x.jpg");
     background-size: cover;
   }
 }
@@ -53,7 +53,7 @@
   .overlay {
     max-width: 1600px;
     height: 600px;
-    background-image: $hero-gradient, url("/images/hero-desk/hero.jpg");
+    background-image: $hero-gradient, url("../images/hero-desk/hero.jpg");
     background-size: cover;
   }
 }
@@ -63,7 +63,7 @@
   .overlay {
     width: 1600px;
     height: 600px;
-    background-image: $hero-gradient, url("/images/hero-desk/hero@2x.jpg");
+    background-image: $hero-gradient, url("../images/hero-desk/hero@2x.jpg");
     background-size: cover;
   }
 }
