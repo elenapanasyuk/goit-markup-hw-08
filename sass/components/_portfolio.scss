@@ -14,21 +14,39 @@
     }
     margin-bottom: 40px;
   }
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex();
+    .item + .item {
+      margin-left: 8px;
+    }
 
-  //   @include centeredFlex();
-  //   margin-bottom: 50px;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+    }
+  }
 }
-
-// for desctop
-// .categories-list .item + .item {
-//   margin-left: 8px;
-// }
 
 .portfolio-list {
   @extend %list;
-  // display: flex;
-  // flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin: -15px;
+  }
 }
+
+.portfolio-list .item {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
 // .portfolio-list .item {
 //   width: calc((100% - 60px) / 3);
 //   margin-right: 30px;
@@ -74,8 +92,11 @@
 
 .portfolio .card {
   @extend %link;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   overflow: hidden;
+  height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,

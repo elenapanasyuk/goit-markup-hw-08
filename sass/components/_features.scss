@@ -1,12 +1,25 @@
 .features-list {
   @extend %list;
-  //   display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
-.item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
+.features-list .item {
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+// for desktop
 // .features-list .item + .item {
 //   margin-left: 30px;
 // }

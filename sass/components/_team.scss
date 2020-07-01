@@ -3,7 +3,11 @@
 }
 .team-list {
   @extend %list;
-  //   display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team-list .item {
@@ -13,9 +17,14 @@
   overflow: hidden;
   background-color: $primary-white-color;
   text-align: center;
-
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
   }
 }
 

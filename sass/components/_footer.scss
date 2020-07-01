@@ -6,15 +6,29 @@
   }
 }
 
+.footer-all-info {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: $footer-background-color;
 }
-// .footer-contacts {
-//   margin-right: 69px;
-// }
+.footer-contacts {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    text-align: center;
+  }
+  // margin-right: 69px;
+}
 
 .join-social-networks .footer-social-networks {
   @extend %list;
@@ -45,9 +59,12 @@
   margin-right: 10px;
 }
 
-// .join-social-networks {
-//   margin-right: 94px;
-// }
+.join-social-networks {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    text-align: center;
+  }
+  // margin-right: 94px;
+}
 
 // .subscribe {
 //   margin-right: auto;
@@ -76,14 +93,17 @@
   flex-direction: column;
   color: $primary-white-color;
   font-style: normal;
-
-  //   only for mobile
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-address .city-address {
   margin-top: 0px;
   margin-bottom: 9px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 8px;
+  }
 }
 .footer-address .link {
   @extend %link;
@@ -98,6 +118,9 @@
 }
 
 .footer-address .link:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 8px;
+  }
   margin-bottom: 9px;
 }
 
@@ -112,13 +135,24 @@
   text-transform: uppercase;
 }
 
-// .subscribe-form {
-//   display: flex;
-// }
+.subscribe-form {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // display: flex;
+}
+.subscribe .footer-call-to-action {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    text-align: center;
+  }
+}
 .subscribe-form .form-field {
   position: relative;
   overflow: hidden;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
   }
 }
@@ -155,6 +189,9 @@
   @media screen and (max-width: 767px) {
     width: 100%;
   }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 450px;
+  }
 }
 
 .subscribe-form .form-field:focus-within > .form-label {
@@ -172,7 +209,7 @@
   min-width: 200px;
   border: 0;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin-left: auto;
     margin-right: auto;
     padding: 10px 29px;
