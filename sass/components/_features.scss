@@ -18,7 +18,12 @@
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
 }
+
 // for desktop
 // .features-list .item + .item {
 //   margin-left: 30px;

@@ -1,8 +1,10 @@
 .footer-content {
-  //   display: flex;
-  //   align-items: baseline;
   @media screen and (max-width: 767px) {
     text-align: center;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
   }
 }
 
@@ -27,7 +29,9 @@
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     text-align: center;
   }
-  // margin-right: 69px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 69px;
+  }
 }
 
 .join-social-networks .footer-social-networks {
@@ -63,12 +67,15 @@
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     text-align: center;
   }
-  // margin-right: 94px;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 94px;
+  }
 }
 
-// .subscribe {
-//   margin-right: auto;
-// }
+.subscribe {
+  margin-right: auto;
+}
 
 .footer-logo {
   @extend %link;
@@ -141,8 +148,9 @@
     flex-direction: column;
     align-items: center;
   }
-
-  // display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 .subscribe .footer-call-to-action {
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -171,11 +179,13 @@
 
 .subscribe-form .form-input {
   display: block;
-  //   for desctop
-  // width: 358px;
   height: 50px;
-  //   padding: 15px 16px;
-  //   margin-right: 12px;
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    padding: 15px 16px;
+    margin-right: 12px;
+  }
+
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -204,8 +214,7 @@
 .subscribe-button {
   @include centeredFlex();
   border-radius: 4px;
-  //   for desctop
-  //   padding: 0;
+
   min-width: 200px;
   border: 0;
 

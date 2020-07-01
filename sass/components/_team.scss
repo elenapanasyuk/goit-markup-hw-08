@@ -22,16 +22,22 @@
       margin-bottom: 30px;
     }
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 8 * 15px) / 4);
     margin: 15px;
   }
 }
 
-// .team-list .item + .item {
-//   margin-left: 30px;
+// @media screen and (min-width: $desktop) {
+//   .team-list .item + .item {
+//     margin-left: 30px;
+//   }
 // }
-
 .team-img {
   display: block;
   margin-bottom: 30px;
