@@ -195,6 +195,7 @@
 
 .icon-check {
   display: inline-block;
+  flex-shrink: 0;
   width: 15px;
   height: 15px;
   margin-right: 8px;
